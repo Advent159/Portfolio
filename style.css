@@ -1,0 +1,576 @@
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(79, 70, 229, 0.5), 0 0 20px rgba(79, 70, 229, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(79, 70, 229, 1), 0 0 30px rgba(79, 70, 229, 1);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(79, 70, 229, 0.5), 0 0 20px rgba(79, 70, 229, 0.5);
+    }
+}
+
+
+
+        /* Animasi kursor berkedip */
+        .typing::after {
+            content: "|";
+            display: inline-block;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+.glow {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.glow:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
+}
+
+.navbar-glow {
+    background: linear-gradient(270deg,  rgba(28, 2, 69, 0.8),rgba(31, 27, 114, 0.8));
+    background-size: 100% 100%;
+    background-position: 0% 100%;
+    transition: background-position 0.3s ease;
+}
+
+.navbar-glow.scrolled {
+    background-position: 100% 100%;
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.5), 0 0 20px rgba(79, 70, 229, 0.5);
+}
+
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.btn-3d {
+    position: relative;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+}
+.navbar-brand {
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 2px;
+text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.3), 
+         5px 5px 10px rgba(79, 70, 229, 0.5); /* Efek 3D */
+}
+
+
+.btn-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    transform: translateZ(-1px);
+    transition: all 0.3s ease;
+}
+
+.btn-3d:hover {
+    transform: translateY(-5px) translateZ(10px);
+}
+
+.btn-3d:hover::before {
+    transform: translateZ(-10px);
+}
+
+.text-3d {
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+}
+@keyframes nebulaAnimation {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+.hero {
+background: linear-gradient(270deg,rgb(2, 1, 30), #1B1464,rgb(43, 23, 83),rgb(43, 53, 244));
+background-size: 400% 400%;
+animation: nebulaAnimation 10s ease infinite;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: "";
+position: absolute;
+top: -50%;
+left: -50%;
+width: 200%;
+height: 200%;
+background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, rgba(0, 0, 0, 0) 80%);
+animation: moveNebula 20s linear infinite;
+}
+
+@keyframes moveNebula {
+0% { transform: rotate(0deg) translateX(20px); }
+50% { transform: rotate(180deg) translateX(50px); }
+100% { transform: rotate(360deg) translateX(20px); }
+}
+div h1 {
+font-family: 'Courier New', Courier, monospace;
+}
+.cyberpunk-btn {
+position: relative;
+display: inline-block;
+font-family: 'Courier New', Courier, monospace;
+padding: 12px 24px;
+font-size: 18px;
+font-weight: bold;
+text-transform: uppercase;
+color: white;
+background: linear-gradient(90deg,rgb(61, 12, 86),rgb(31, 32, 102));
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cyberpunk-btn:hover {
+transform: translateY(-5px);
+box-shadow: 0 5px 15px rgba(255, 0, 255, 0.5), 0 5px 15px rgba(0, 255, 255, 0.5);
+}
+@keyframes matrix {
+0% { color: white; text-shadow: 0 0 5px white; }
+50% { color: white; text-shadow: 0 0 10px white; }
+100% { color: white; text-shadow: 0 0 5px white; }
+}
+
+.matrix-text {
+font-size: 48px;
+font-weight: bold;
+text-transform: uppercase;
+animation: matrix 1s infinite alternate;
+}
+@keyframes star-glow {
+0% { text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; }
+50% { text-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff; }
+100% { text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; }
+}
+
+.starry-text {
+font-size: 20px;
+font-weight: bold;
+font-family: 'Courier New', Courier, monospace;
+color: white;
+text-transform: uppercase;
+animation: star-glow 1.5s infinite alternate;
+}
+/* Efek Glow */
+.navbar-glow {
+    background:  linear-gradient(270deg,  rgba(28, 2, 69, 0.8),rgba(31, 27, 114, 0.8));
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+/* Efek Glow pada teks */
+.starry-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0ff;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px #0ff, 0px 0px 20px #00f, 0px 0px 30px #0ff;
+    transition: 0.3s ease-in-out;
+}
+
+.starry-text:hover {
+    text-shadow: 0px 0px 15px #0ff, 0px 0px 30px #00f, 0px 0px 40px #0ff;
+}
+
+/* Efek Nebula */
+body {
+    background: url('https://source.unsplash.com/1600x900/?nebula,galaxy') no-repeat center center fixed;
+    background-size: cover;
+    animation: nebula-move 20s infinite alternate;
+}
+
+@keyframes nebula-move {
+    0% { background-position: center; }
+    100% { background-position: top right; }
+}
+
+/* Efek Hover pada Menu */
+.nav-link {
+    color: white !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #0ff !important;
+    text-shadow: 0px 0px 10px #0ff;
+}
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+/* Efek Glow Neon */
+.neon-glow {
+position: relative;
+border: 4px solid white;
+box-shadow: 0 0 20px white;
+transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+animation: pulseGlow 1.5s infinite alternate ease-in-out;
+}
+
+/* Efek Glow Berdenyut */
+@keyframes pulseGlow {
+0% {
+box-shadow: 0 0 15px white;
+}
+100% {
+box-shadow: 0 0 35px white;
+}
+}
+
+/* Efek Hover: Warna berubah & glow lebih terang */
+.neon-glow:hover {
+transform: scale(1.1);
+box-shadow: 0 0 40px white, 0 0 80px white;
+border-color: white;
+}
+
+/* Efek Glitch RGB */
+.neon-glow::before, .neon-glow::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: url('profile.jpg') center/cover;
+opacity: 0.5;
+mix-blend-mode: screen;
+}
+
+/* Distorsi RGB */
+.neon-glow::before {
+transform: translate(-3px, -3px);
+filter: hue-rotate(180deg);
+}
+.neon-glow::after {
+transform: translate(3px, 3px);
+filter: hue-rotate(90deg);
+}
+
+/* Glitch Animasi Hover */
+.neon-glow:hover::before {
+transform: translate(-5px, -5px);
+}
+.neon-glow:hover::after {
+transform: translate(5px, 5px);
+}
+        /* Navbar di halaman home */
+        .navbar-home {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: transparent;
+            transition: background 0.3s ease;
+        }
+
+        /* Navbar saat di-scroll */
+        .navbar-scrolled {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(270deg, rgba(28, 2, 69, 0.8), rgba(31, 27, 114, 0.8));
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            transition: background 0.3s ease;
+        }
+        /* Sidebar untuk tampilan mobile */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 250px;
+            height: 100vh;
+            background: linear-gradient(270deg, rgba(28, 2, 69, 0.8), rgba(31, 27, 114, 0.8));
+            transition: left 0.3s ease;
+            z-index: 1001;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar .nav-link {
+            color: white !important;
+            padding: 10px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Overlay untuk sidebar */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+       /* Toggler kreatif */
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1002;
+}
+
+.navbar-toggler span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-toggler span:nth-child(1) {
+    transform-origin: top left;
+}
+
+.navbar-toggler span:nth-child(3) {
+    transform-origin: bottom left;
+}
+
+/* Perbaikan transformasi untuk tanda silang (X) yang rapi */
+.navbar-toggler.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* Sesuaikan nilai translate */
+}
+
+.navbar-toggler.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(-1px, 1px); /* Sesuaikan nilai translate */
+}
+
+/* Efek hover pada toggler */
+.navbar-toggler:hover span {
+    background: #0ff;
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+        /* Animasi slide-down untuk navbar */   
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .navbar {
+            animation: slideDown 0.5s ease-out;
+        }
+
+        /* Animasi menu-item saat di-hover */
+        .nav-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: white;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-item:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Animasi navbar saat di-scroll */
+        .navbar-scrolled {
+            animation: fadeIn 0.3s ease;
+        }
+
+       /* Animasi fade out untuk navbar */
+       @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .navbar.hide {
+            animation: fadeOut 0.5s ease-out; /* Animasi fade out saat navbar menghilang */
+            opacity: 0;
+        }
+                /* Navbar dengan animasi smooth scroll */
+                .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out; /* Animasi smooth saat navbar bergerak */
+        }
+
+        /* Class untuk menyembunyikan navbar saat di-scroll ke bawah */
+        .navbar.hide {
+            transform: translateY(-100%); /* Geser navbar ke atas (sembunyikan) */
+        }
+
+        /* Class untuk menampilkan navbar saat di-scroll ke atas */
+        .navbar.show {
+            transform: translateY(0); /* Kembalikan navbar ke posisi semula */
+        }
+         /* Navbar dengan barrier dan animasi smooth scroll */
+         .navbar {
+            position: fixed; /* Navbar tetap di bagian atas */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease-in-out; /* Animasi smooth untuk semua perubahan */
+            background: transparent; /* Latar belakang transparan saat awal */
+            box-shadow: none; /* Tanpa shadow saat awal */
+        }
+
+        /* Class untuk navbar saat di-scroll */
+        .navbar.scrolled {
+            background: rgba(28, 2, 69, 0.9); /* Warna barrier saat di-scroll */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow untuk efek kedalaman */
+        }
+
+       /* Animasi Glow di Latar Belakang Footer */
+@keyframes glow {
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+.animate-glow {
+    animation: glow 3s infinite ease-in-out;
+}
+
+/* Efek Hover pada Link Footer */
+footer a:hover {
+    color: #a78bfa; /* Warna ungu muda */
+    text-shadow: 0 0 5px rgba(167, 139, 250, 0.5);
+}
+
+/* Animasi pada Teks Copyright */
+footer .text-sm {
+    position: relative;
+    display: inline-block;
+}
+
+footer .text-sm::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #a78bfa; /* Warna ungu muda */
+    bottom: -2px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+footer .text-sm:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Efek pada Ikon Hati dan Kopi */
+footer .fa-heart, footer .fa-coffee {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .fa-heart:hover, footer .fa-coffee:hover {
+    transform: scale(1.2);
+    color: #ff6b6b; /* Warna merah untuk hati */
+}
+
+/* Gaya untuk ikon WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Pastikan ikon muncul di atas elemen lain */
+    background-color: #25d366; /* Warna hijau WhatsApp */
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e; /* Warna hijau lebih gelap saat hover */
+    transform: scale(1.1); /* Membesar saat dihover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon {
+    font-size: 32px; /* Ukuran ikon */
+}
